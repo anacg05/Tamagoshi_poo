@@ -15,14 +15,14 @@ class Tamagoshi:
     # ------------------------
     def alimentar(self, quantidade):
         if not self.vivo:
-            print(f"{self.nome} não pode comer, já morreu.")
+            print(f"{self.nome} morreu.")
             return
         if 0 <= quantidade <= 100:
             self.fome = self.limitar(self.fome - self.fome * (quantidade / 100))
 
     def brincar(self, quantidade):
         if not self.vivo:
-            print(f"{self.nome} não pode brincar, já morreu.")
+            print(f"{self.nome} morreu.")
             return
         if 0 <= quantidade <= 100:
             self.tedio = self.limitar(self.tedio - self.tedio * (quantidade / 100))
@@ -90,7 +90,7 @@ class Hamster(Tamagoshi):
             return
         self.tedio = self.limitar(self.tedio - 15)
         self.fome = self.limitar(self.fome + 5)  # rodar dá fome
-        print(f"{self.nome} está se exercitando na roda 🐹")
+        print(f"{self.nome} está se exercitando na roda 🎡🐹")
 
     def guardar_na_bochecha(self, quantidade):
         if not self.vivo:
